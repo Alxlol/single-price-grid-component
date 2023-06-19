@@ -1,0 +1,129 @@
+/* GoogleFonts */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --clr-primary: hsl(179, 62%, 43%);
+  --clr-secondary: hsl(71, 73%, 54%);
+  --clr-neutral: hsl(204, 43%, 93%);
+  --clr-accent: hsl(218, 22%, 67%);
+}
+
+* {
+  font-family: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Karla;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.flex-group span {
+  padding-right: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.flex-group p {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  margin: 1rem auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.344);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.item {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+@media (min-width: 680px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .flex-column {
+    display: flex;
+  }
+
+  .item {
+    padding: 2rem;
+  }
+}
+
+.item--primary {
+  background-color: var(--clr-primary);
+  color: white;
+}
+
+.item--accent {
+  background-color: hsl(179, 61%, 60%);
+  color: white;
+}
+
+[data-clr="primary"] {
+  color: var(--clr-primary);
+}
+
+[data-clr="secondary"] {
+  color: var(--clr-secondary);
+}
+
+[data-clr="accent"] {
+  color: var(--clr-accent);
+}
+
+[data-margin="bottom"] {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+[data-margin="top"] {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--clr-secondary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hsl(71, 73%, 66%);
+}
